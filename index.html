@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>opheliadorothy</title>
     <style>
-        /* 引入原有的衬线体和更高级的手写花体 La Belle Aurore */
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=La+Belle+Aurore&display=swap');
+        /* 引入原有的衬线体和更轻盈的手写体 Alex Brush */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Alex+Brush&display=swap');
 
         body {
             background-color: #ffffff;
@@ -45,10 +45,9 @@
 
         /* 第二屏：正文及社交链接区 */
         .content-section {
-            max-width: 650px; /* 稍微加宽一点，让花体伸展更自然 */
+            max-width: 700px; /* 稍微拓宽，让手写体横向拉伸，更显纤细 */
             margin: 0 auto;
             padding: 15vh 40px 10vh 40px;
-            color: #1a1a1a;
         }
 
         .section-label {
@@ -57,19 +56,20 @@
             font-size: 0.8rem;
             letter-spacing: 0.4em;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             display: block;
-            opacity: 0.8;
+            opacity: 0.6; /* 降低标签亮度，引导视线向下 */
         }
 
         .main-text {
-            /* 核心修改：使用更具艺术感的纤细花体 */
-            font-family: 'La Belle Aurore', cursive;
-            font-size: 1.5rem; 
-            line-height: 1.3; /* 缩减行间距，让字里行间更紧凑 */
+            /* 核心修改：使用 Alex Brush，线条极细且具有流动感 */
+            font-family: 'Alex Brush', cursive;
+            font-size: 1.8rem; /* 手写体偏细，字号稍大以保证清晰度 */
+            line-height: 1.8; /* 极大的行间距，保持呼吸感 */
             text-align: left;
-            letter-spacing: -0.02em; /* 进一步收紧字间距 */
-            word-spacing: -0.05em; /* 单词之间也更靠近 */
+            color: rgba(26, 26, 26, 0.7); /* 关键：使用 70% 透明度的灰黑，模拟淡墨感 */
+            letter-spacing: 0.02em;
+            word-spacing: 0.1em;
         }
 
         /* 社交媒体链接样式 */
@@ -77,9 +77,9 @@
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
-            border-top: 0.5px solid rgba(176, 48, 32, 0.15);
+            border-top: 0.5px solid rgba(176, 48, 32, 0.1);
             padding-top: 30px;
-            margin-top: 60px;
+            margin-top: 80px;
         }
 
         .social-links a, .social-links span {
@@ -90,16 +90,17 @@
             letter-spacing: 0.15em;
             text-transform: lowercase;
             transition: opacity 0.3s ease;
+            opacity: 0.8;
         }
 
         .social-links a:hover {
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         /* 响应式调整 */
         @media (max-width: 600px) {
             .content-section { width: 88%; }
-            .main-text { font-size: 1.3rem; }
+            .main-text { font-size: 1.5rem; line-height: 1.6; }
         }
     </style>
 </head>
@@ -126,6 +127,7 @@
             <a href="https://x.com/opheliaproduce" target="_blank">x (twitter)</a>
             <a href="https://www.youtube.com/@OpheliaDorothy-y7i" target="_blank">youtube</a>
             <a href="https://weibo.com/u/7871824717" target="_blank">weibo</a>
+            <a href="mailto:opheliadorothyartist@gmail.com">email</a>
             <span>douyin: opheliadorothy</span>
         </nav>
     </section>
