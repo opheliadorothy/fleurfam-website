@@ -1,2 +1,105 @@
-<h1>Ophelia Dorothy</h1>
-<p>fleurfam.org 正在建设中...</p>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ophelia Dorothy | Fleur Fam</title>
+    <style>
+        body {
+            background-color: #f9f4ef; /* 昭和纸张感 */
+            color: #2d2d2d;
+            font-family: "Hiragino Mincho ProN", "MS PMincho", "serif"; /* 日式宋体感 */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            border: 1px solid #2d2d2d;
+            padding: 60px 40px;
+            position: relative;
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+        }
+
+        /* 装饰用的小方块，日式排版常见 */
+        .container::before {
+            content: "FLEUR FAM";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #f9f4ef;
+            padding: 0 10px;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            margin-top: 20px;
+            letter-spacing: 0.3em;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .jp-text {
+            writing-mode: vertical-rl; /* 竖排文字 */
+            text-orientation: mixed;
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            letter-spacing: 0.5em;
+            color: #a0a0a0;
+        }
+
+        .links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #2d2d2d;
+            padding-bottom: 2px;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            background: #2d2d2d;
+            color: #f9f4ef;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ophelia Dorothy</h1>
+        <div class="subtitle">Artist • Musician • Producer</div>
+        
+        <div class="jp-
