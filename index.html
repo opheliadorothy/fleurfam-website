@@ -1,88 +1,134 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>opheliadorothy</title>
+    <title>opheliadorothy | fleurfam.org</title>
     <style>
-        /* 引入极细的 Google 字体 */
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
 
         body {
-            background-color: #f7f2ed; 
+            background-color: #ffffff; /* 按照你要求的纯白底 */
             margin: 0;
             padding: 0;
+            color: #b03020; /* 昭和朱红 */
+            font-family: 'Cormorant Garamond', serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* 重点：通过 padding 让内容靠上，而不是居中 */
-            padding-top: 15vh; 
-            height: 85vh;
-            overflow: hidden;
         }
 
-        .main-logo {
+        /* 顶部名字部分 */
+        .header {
+            margin-top: 10vh;
             text-align: center;
-            user-select: none;
+            z-index: 10;
         }
 
         h1 {
-            color: #b03020;
-            /* 使用 Cormorant Garamond，这是目前最优雅纤细的字体之一 */
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 10vw, 5rem);
-            font-weight: 300; /* 极细权重 */
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 300;
             margin: 0;
-            line-height: 1;
             text-transform: lowercase;
-            letter-spacing: 0.05em; /* 增加字间距，显得更透气 */
+            letter-spacing: 0.1em;
         }
 
         .jp-title {
-            color: #b03020;
-            /* 日语使用细体宋体感 */
             font-family: "YuMincho", "Hiragino Mincho ProN", serif;
-            font-size: clamp(0.9rem, 3vw, 1.8rem);
+            font-size: 1.2rem;
             font-weight: 200;
-            margin-top: 15px;
-            letter-spacing: 0.4em; /* 极宽间距 */
+            margin-top: 5px;
+            letter-spacing: 0.5em;
         }
 
-        /* 底部导航也相应变细 */
-        .nav {
-            position: absolute;
-            bottom: 60px;
+        /* 图片区域：图片在下，文字叠在图片背部位置 */
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 40px 0;
             display: flex;
-            gap: 50px;
+            justify-content: center;
         }
 
-        .nav a {
-            color: #b03020;
-            text-decoration: none;
-            font-size: 0.7rem;
+        .hero-image {
+            width: 90%;
+            height: auto;
+            display: block;
+            /* 如果图片还没上传，这里会显示占位符空间 */
+        }
+
+        /* 介绍文案部分 */
+        .intro-section {
+            max-width: 600px; /* 限制宽度，让长句换行，产生诗意 */
+            padding: 80px 20px;
+            text-align: justify; /* 两端对齐，更有高级感 */
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
             font-weight: 300;
-            letter-spacing: 0.2em;
-            opacity: 0.6;
-            transition: opacity 0.3s;
         }
 
-        .nav a:hover {
-            opacity: 1;
+        .highlight {
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .footer-note {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            border-top: 1px solid #b03020;
+            padding-top: 20px;
+            width: 100px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            .intro-section { width: 85%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-logo">
+    <div class="header">
         <h1>opheliadorothy</h1>
         <div class="jp-title">オフェリアドロシー</div>
     </div>
 
-    <nav class="nav">
-        <a href="#">MUSIC</a>
-        <a href="#">JOURNAL</a>
-        <a href="#">CONTACT</a>
-    </nav>
+    <div class="image-container">
+        <img src="me.png" alt="Ophelia Dorothy" class="hero-image">
+    </div>
+
+    <article class="intro-section">
+        <p class="intro-text">
+            I am <span class="highlight">opheliadorothy</span>, a creative artist whose practice flows freely across boundaries. My work weaves together music composition and performance, fashion styling and design, photography, programming, and the electric energy of DJing. Each discipline informs the others, forming a personal language that explores beauty, emotion, rhythm, and innovation.
+        </p>
+
+        <p class="intro-text">
+            At present, I am wholeheartedly pursuing the path I have long envisioned. My immediate horizon centers on the release of my debut album—a deeply personal collection that distills years of sonic exploration, visual storytelling, and lived experience. 
+        </p>
+
+        <p class="intro-text">
+            From there, I am steadily building toward the next chapter: the establishment of <span class="highlight">Fleur Fam</span>, my own music company dedicated to nurturing bold, boundary-pushing talent and creating space for artistry that feels both timeless and fearlessly forward-looking.
+        </p>
+
+        <p class="intro-text">
+            Whether through a carefully composed melody, a captured moment in light, an unexpected fusion of code and sound, or the curation of an unforgettable set, I seek to invite connection, evoke feeling, and celebrate the quiet power of creation.
+        </p>
+
+        <p class="intro-text" style="text-align: center; margin-top: 80px;">
+            Welcome to my world.<br>
+            I’m just getting started.
+        </p>
+
+        <center><div class="footer-note">2026</div></center>
+    </article>
 
 </body>
 </html>
