@@ -3,132 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>opheliadorothy | fleurfam.org</title>
+    <title>opheliadorothy</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
+        /* 基础样式 */
         body {
-            background-color: #ffffff; /* 按照你要求的纯白底 */
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
             color: #b03020; /* 昭和朱红 */
             font-family: 'Cormorant Garamond', serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            scroll-behavior: smooth; /* 让滚动更平滑 */
         }
 
-        /* 顶部名字部分 */
-        .header {
-            margin-top: 10vh;
+        /* 第一屏：绝对居中 */
+        .hero-screen {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            z-index: 10;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-size: clamp(2.5rem, 10vw, 5.5rem);
             font-weight: 300;
             margin: 0;
             text-transform: lowercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
         }
 
         .jp-title {
             font-family: "YuMincho", "Hiragino Mincho ProN", serif;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 2rem);
             font-weight: 200;
-            margin-top: 5px;
-            letter-spacing: 0.5em;
+            margin-top: 10px;
+            letter-spacing: 0.6em;
         }
 
-        /* 图片区域：图片在下，文字叠在图片背部位置 */
-        .image-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 40px 0;
-            display: flex;
-            justify-content: center;
+        /* 第二屏：正文部分 */
+        .content-section {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20vh 20px 15vh 20px; /* 顶部留出 20% 屏幕高度的距离 */
         }
 
-        .hero-image {
-            width: 90%;
-            height: auto;
+        .section-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            opacity: 0.7;
             display: block;
-            /* 如果图片还没上传，这里会显示占位符空间 */
         }
 
-        /* 介绍文案部分 */
-        .intro-section {
-            max-width: 600px; /* 限制宽度，让长句换行，产生诗意 */
-            padding: 80px 20px;
-            text-align: justify; /* 两端对齐，更有高级感 */
-            line-height: 1.8;
-            letter-spacing: 0.05em;
-        }
-
-        .intro-text {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+        .main-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            text-align: justify;
             font-weight: 300;
-        }
-
-        .highlight {
-            font-style: italic;
-            opacity: 0.8;
-        }
-
-        .footer-note {
-            margin-top: 60px;
-            text-align: center;
-            font-size: 0.9rem;
-            letter-spacing: 0.2em;
-            border-top: 1px solid #b03020;
-            padding-top: 20px;
-            width: 100px;
+            letter-spacing: 0.02em;
         }
 
         /* 响应式调整 */
         @media (max-width: 600px) {
-            .intro-section { width: 85%; }
+            .content-section { width: 85%; }
+            h1 { font-size: 3rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
+    <section class="hero-screen">
         <h1>opheliadorothy</h1>
         <div class="jp-title">オフェリアドロシー</div>
-    </div>
+    </section>
 
-    <div class="image-container">
-        <img src="me.png" alt="Ophelia Dorothy" class="hero-image">
-    </div>
-
-    <article class="intro-section">
-        <p class="intro-text">
-            I am <span class="highlight">opheliadorothy</span>, a creative artist whose practice flows freely across boundaries. My work weaves together music composition and performance, fashion styling and design, photography, programming, and the electric energy of DJing. Each discipline informs the others, forming a personal language that explores beauty, emotion, rhythm, and innovation.
-        </p>
-
-        <p class="intro-text">
-            At present, I am wholeheartedly pursuing the path I have long envisioned. My immediate horizon centers on the release of my debut album—a deeply personal collection that distills years of sonic exploration, visual storytelling, and lived experience. 
-        </p>
-
-        <p class="intro-text">
-            From there, I am steadily building toward the next chapter: the establishment of <span class="highlight">Fleur Fam</span>, my own music company dedicated to nurturing bold, boundary-pushing talent and creating space for artistry that feels both timeless and fearlessly forward-looking.
-        </p>
-
-        <p class="intro-text">
-            Whether through a carefully composed melody, a captured moment in light, an unexpected fusion of code and sound, or the curation of an unforgettable set, I seek to invite connection, evoke feeling, and celebrate the quiet power of creation.
-        </p>
-
-        <p class="intro-text" style="text-align: center; margin-top: 80px;">
-            Welcome to my world.<br>
-            I’m just getting started.
-        </p>
-
-        <center><div class="footer-note">2026</div></center>
-    </article>
+    <section class="content-section">
+        <span class="section-label">introduction</span>
+        
+        <div class="main-text">
+            My creative practice flows freely across boundaries, weaving together music composition and performance, fashion styling and design, photography, programming, and the electric energy of DJing. Each discipline informs the others, forming a personal language that explores beauty, emotion, rhythm, and innovation.
+            <br><br>
+            At present, I am wholeheartedly pursuing the path I have long envisioned. My immediate horizon centers on the release of my debut album—a deeply personal collection that distills years of sonic exploration, visual storytelling, and lived experience. From there, I am steadily building toward the next chapter: the establishment of Fleur Fam, my own music company dedicated to nurturing bold, boundary-pushing talent and creating space for artistry that feels both timeless and fearlessly forward-looking.
+            <br><br>
+            Whether through a carefully composed melody, a captured moment in light, an unexpected fusion of code and sound, or the curation of an unforgettable set, I seek to invite connection, evoke feeling, and celebrate the quiet power of creation. Welcome to my world. I’m just getting started.
+        </div>
+    </section>
 
 </body>
 </html>
