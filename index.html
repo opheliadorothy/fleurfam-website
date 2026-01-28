@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>opheliadorothy</title>
     <style>
-        /* 引入原有的衬线体和新的手写体 */
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nanum+Pen+Script&display=swap');
+        /* 引入原有的衬线体和手写体 */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Nanum+Pen+Script&display=swap');
 
         body {
             background-color: #ffffff;
@@ -15,7 +15,7 @@
             scroll-behavior: smooth;
         }
 
-        /* 第一屏保持原样，那是你的视觉签名 */
+        /* 第一屏：视觉签名 */
         .hero-screen {
             height: 100vh;
             display: flex;
@@ -23,7 +23,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #b03020; /* 名字依然保持朱红 */
+            color: #b03020;
         }
 
         h1 {
@@ -43,16 +43,16 @@
             letter-spacing: 0.6em;
         }
 
-        /* 第二屏：手写感正文区 */
+        /* 第二屏：正文及社交链接区 */
         .content-section {
             max-width: 600px;
             margin: 0 auto;
-            padding: 15vh 30px 15vh 30px;
-            color: #1a1a1a; /* 墨黑色，更有质感 */
+            padding: 15vh 30px 10vh 30px;
+            color: #1a1a1a;
         }
 
         .section-label {
-            color: #b03020; /* 标签保留一点红色作为点缀 */
+            color: #b03020;
             font-family: 'Cormorant Garamond', serif;
             font-size: 0.9rem;
             letter-spacing: 0.3em;
@@ -62,19 +62,52 @@
         }
 
         .main-text {
-            /* 核心修改：手写字体 */
             font-family: 'Nanum Pen Script', cursive;
-            font-size: 1.6rem; /* 手写体通常偏小，所以字号调大一点 */
-            line-height: 1.4;
-            text-align: left; /* 手写感不适合两端对齐，左对齐更自然 */
-            letter-spacing: 0.01em; /* 缩小字间距，更有连笔感 */
+            font-size: 1.6rem;
+            line-height: 1.5;
+            text-align: left;
+            letter-spacing: 0.01em;
             word-spacing: 0.1em;
+            margin-bottom: 80px; /* 为下面的链接留出空间 */
         }
 
-        /* 响应式 */
+        /* 社交媒体链接样式 */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            border-top: 0.5px solid rgba(176, 48, 32, 0.2); /* 极其淡的朱红分割线 */
+            padding-top: 30px;
+        }
+
+        .social-links a {
+            font-family: 'Cormorant Garamond', serif;
+            color: #b03020;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: lowercase;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 0.5;
+        }
+
+        .social-links span {
+            font-family: 'Cormorant Garamond', serif;
+            color: #b03020;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: lowercase;
+            opacity: 0.8;
+        }
+
+        /* 响应式调整 */
         @media (max-width: 600px) {
             .content-section { width: 85%; }
             .main-text { font-size: 1.4rem; }
+            .social-links { gap: 15px; }
         }
     </style>
 </head>
@@ -95,6 +128,14 @@
             <br><br>
             Whether through a carefully composed melody, a captured moment in light, an unexpected fusion of code and sound, or the curation of an unforgettable set, I seek to invite connection, evoke feeling, and celebrate the quiet power of creation. Welcome to my world. I’m just getting started.
         </div>
+
+        <nav class="social-links">
+            <a href="https://www.instagram.com/iamartistho/" target="_blank">instagram</a>
+            <a href="https://x.com/opheliaproduce" target="_blank">x (twitter)</a>
+            <a href="https://www.youtube.com/@OpheliaDorothy-y7i" target="_blank">youtube</a>
+            <a href="https://weibo.com/u/7871824717" target="_blank">weibo</a>
+            <span>douyin: opheliadorothy</span>
+        </nav>
     </section>
 
 </body>
