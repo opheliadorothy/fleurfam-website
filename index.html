@@ -3,100 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>opheliadorothy | fleurfam.org</title>
+    <title>opheliadorothy</title>
     <style>
-        /* 导入一个带有昭和复古感的 Google 字体 */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        /* 引入一种厚重的复古衬线字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
         body {
-            background-color: #f7f2ed; /* 昭和纸张米色 */
+            background-color: #f2ede4; /* 更有年代感的米色纸张 */
             margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
         }
 
-        .header-section {
+        .main-logo {
             text-align: center;
+            user-select: none;
         }
 
         h1 {
-            color: #b03020; /* 昭和朱红 */
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 8vw, 4.5rem); /* 响应式大小 */
-            font-weight: 800;
+            color: #bd2d1e; /* 昭和深朱红 */
+            font-family: 'Abril+Fatface', serif;
+            font-size: clamp(3rem, 12vw, 6rem); /* 极大的字体占比 */
+            font-weight: 400;
             margin: 0;
-            letter-spacing: -0.02em;
-            text-transform: lowercase; /* 强制全小写 */
+            line-height: 0.9;
+            text-transform: lowercase;
+            letter-spacing: -0.03em;
         }
 
         .jp-title {
-            color: #b03020;
-            font-family: "Hiragino Sans", "Meiryo", "sans-serif";
-            font-size: clamp(1rem, 4vw, 2.2rem);
+            color: #bd2d1e;
+            font-family: "Hiragino Sans", "Meiryo", sans-serif;
+            font-size: clamp(1.2rem, 4vw, 2.5rem);
             font-weight: 900;
-            margin-top: -5px;
-            letter-spacing: 0.1em;
-        }
-
-        .nav-links {
-            margin-top: 60px;
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: #b03020;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
+            margin-top: 10px;
             letter-spacing: 0.2em;
-            transition: opacity 0.3s;
         }
 
-        .nav-links a:hover {
-            opacity: 0.6;
-        }
-
-        /* 底部极简信息 */
-        .footer {
+        /* 极简导航，放在底部，不干扰视觉中心 */
+        .nav {
             position: absolute;
-            bottom: 40px;
-            color: #b03020;
-            font-size: 10px;
-            letter-spacing: 0.3em;
-            opacity: 0.7;
+            bottom: 50px;
+            display: flex;
+            gap: 40px;
         }
 
-        /* 模拟老照片的轻微噪点感 */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
-            opacity: 0.4;
-            pointer-events: none;
+        .nav a {
+            color: #bd2d1e;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            opacity: 0.8;
+        }
+
+        .nav a:hover {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-section">
+    <div class="main-logo">
         <h1>opheliadorothy</h1>
-        <div class="jp-title">オフェリア・ドロシー</div>
+        <div class="jp-title">オフェリアドロシー</div>
     </div>
 
-    <nav class="nav-links">
+    <nav class="nav">
         <a href="#">MUSIC</a>
         <a href="#">JOURNAL</a>
-        <a href="#">BOUTIQUE</a>
         <a href="#">CONTACT</a>
     </nav>
-
-    <div class="footer">FLEURFAM.ORG © 2026</div>
 
 </body>
 </html>
