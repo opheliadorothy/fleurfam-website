@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>opheliadorothy</title>
     <style>
-        /* 引入一种厚重的复古衬线字体 */
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        /* 引入极细的 Google 字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
         body {
-            background-color: #f2ede4; /* 更有年代感的米色纸张 */
+            background-color: #f7f2ed; 
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            /* 重点：通过 padding 让内容靠上，而不是居中 */
+            padding-top: 15vh; 
+            height: 85vh;
             overflow: hidden;
         }
 
@@ -25,40 +27,43 @@
         }
 
         h1 {
-            color: #bd2d1e; /* 昭和深朱红 */
-            font-family: 'Abril+Fatface', serif;
-            font-size: clamp(3rem, 12vw, 6rem); /* 极大的字体占比 */
-            font-weight: 400;
+            color: #b03020;
+            /* 使用 Cormorant Garamond，这是目前最优雅纤细的字体之一 */
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-weight: 300; /* 极细权重 */
             margin: 0;
-            line-height: 0.9;
+            line-height: 1;
             text-transform: lowercase;
-            letter-spacing: -0.03em;
+            letter-spacing: 0.05em; /* 增加字间距，显得更透气 */
         }
 
         .jp-title {
-            color: #bd2d1e;
-            font-family: "Hiragino Sans", "Meiryo", sans-serif;
-            font-size: clamp(1.2rem, 4vw, 2.5rem);
-            font-weight: 900;
-            margin-top: 10px;
-            letter-spacing: 0.2em;
+            color: #b03020;
+            /* 日语使用细体宋体感 */
+            font-family: "YuMincho", "Hiragino Mincho ProN", serif;
+            font-size: clamp(0.9rem, 3vw, 1.8rem);
+            font-weight: 200;
+            margin-top: 15px;
+            letter-spacing: 0.4em; /* 极宽间距 */
         }
 
-        /* 极简导航，放在底部，不干扰视觉中心 */
+        /* 底部导航也相应变细 */
         .nav {
             position: absolute;
-            bottom: 50px;
+            bottom: 60px;
             display: flex;
-            gap: 40px;
+            gap: 50px;
         }
 
         .nav a {
-            color: #bd2d1e;
+            color: #b03020;
             text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            opacity: 0.8;
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            opacity: 0.6;
+            transition: opacity 0.3s;
         }
 
         .nav a:hover {
