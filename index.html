@@ -1,105 +1,102 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ophelia Dorothy | Fleur Fam</title>
+    <title>opheliadorothy | fleurfam.org</title>
     <style>
+        /* 导入一个带有昭和复古感的 Google 字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
         body {
-            background-color: #f9f4ef; /* 昭和纸张感 */
-            color: #2d2d2d;
-            font-family: "Hiragino Mincho ProN", "MS PMincho", "serif"; /* 日式宋体感 */
+            background-color: #f7f2ed; /* 昭和纸张米色 */
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
         }
 
-        .container {
-            border: 1px solid #2d2d2d;
-            padding: 60px 40px;
-            position: relative;
-            max-width: 600px;
-            width: 80%;
+        .header-section {
             text-align: center;
         }
 
-        /* 装饰用的小方块，日式排版常见 */
-        .container::before {
-            content: "FLEUR FAM";
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: #f9f4ef;
-            padding: 0 10px;
-            font-size: 12px;
-            letter-spacing: 2px;
-        }
-
         h1 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            letter-spacing: 0.2em;
+            color: #b03020; /* 昭和朱红 */
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 8vw, 4.5rem); /* 响应式大小 */
+            font-weight: 800;
             margin: 0;
-            line-height: 1.2;
+            letter-spacing: -0.02em;
+            text-transform: lowercase; /* 强制全小写 */
         }
 
-        .subtitle {
-            font-size: 0.9rem;
-            margin-top: 20px;
-            letter-spacing: 0.3em;
-            color: #666;
-            text-transform: uppercase;
+        .jp-title {
+            color: #b03020;
+            font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+            font-size: clamp(1rem, 4vw, 2.2rem);
+            font-weight: 900;
+            margin-top: -5px;
+            letter-spacing: 0.1em;
         }
 
-        .jp-text {
-            writing-mode: vertical-rl; /* 竖排文字 */
-            text-orientation: mixed;
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.8rem;
-            letter-spacing: 0.5em;
-            color: #a0a0a0;
-        }
-
-        .links {
-            margin-top: 40px;
+        .nav-links {
+            margin-top: 60px;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            gap: 30px;
         }
 
-        a {
-            color: #2d2d2d;
+        .nav-links a {
+            color: #b03020;
             text-decoration: none;
             font-size: 0.8rem;
-            border-bottom: 1px solid #2d2d2d;
-            padding-bottom: 2px;
-            transition: all 0.3s;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            transition: opacity 0.3s;
         }
 
-        a:hover {
-            background: #2d2d2d;
-            color: #f9f4ef;
+        .nav-links a:hover {
+            opacity: 0.6;
         }
 
+        /* 底部极简信息 */
         .footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 40px;
+            color: #b03020;
             font-size: 10px;
-            letter-spacing: 1px;
-            opacity: 0.5;
+            letter-spacing: 0.3em;
+            opacity: 0.7;
+        }
+
+        /* 模拟老照片的轻微噪点感 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+            opacity: 0.4;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Ophelia Dorothy</h1>
-        <div class="subtitle">Artist • Musician • Producer</div>
-        
-        <div class="jp-
+    <div class="header-section">
+        <h1>opheliadorothy</h1>
+        <div class="jp-title">オフェリア・ドロシー</div>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#">MUSIC</a>
+        <a href="#">JOURNAL</a>
+        <a href="#">BOUTIQUE</a>
+        <a href="#">CONTACT</a>
+    </nav>
+
+    <div class="footer">FLEURFAM.ORG © 2026</div>
+
+</body>
+</html>
