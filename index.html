@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>opheliadorothy</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+        /* 引入原有的衬线体和新的手写体 */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Nanum+Pen+Script&display=swap');
 
-        /* 基础样式 */
         body {
             background-color: #ffffff;
             margin: 0;
             padding: 0;
-            color: #b03020; /* 昭和朱红 */
-            font-family: 'Cormorant Garamond', serif;
-            scroll-behavior: smooth; /* 让滚动更平滑 */
+            scroll-behavior: smooth;
         }
 
-        /* 第一屏：绝对居中 */
+        /* 第一屏保持原样，那是你的视觉签名 */
         .hero-screen {
             height: 100vh;
             display: flex;
@@ -25,9 +23,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            color: #b03020; /* 名字依然保持朱红 */
         }
 
         h1 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2.5rem, 10vw, 5.5rem);
             font-weight: 300;
             margin: 0;
@@ -43,34 +43,38 @@
             letter-spacing: 0.6em;
         }
 
-        /* 第二屏：正文部分 */
+        /* 第二屏：手写感正文区 */
         .content-section {
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20vh 20px 15vh 20px; /* 顶部留出 20% 屏幕高度的距离 */
+            padding: 15vh 30px 15vh 30px;
+            color: #1a1a1a; /* 墨黑色，更有质感 */
         }
 
         .section-label {
-            font-size: 0.8rem;
-            letter-spacing: 0.4em;
+            color: #b03020; /* 标签保留一点红色作为点缀 */
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
             text-transform: uppercase;
-            margin-bottom: 60px;
-            opacity: 0.7;
+            margin-bottom: 40px;
             display: block;
         }
 
         .main-text {
-            font-size: 1.15rem;
-            line-height: 2;
-            text-align: justify;
-            font-weight: 300;
-            letter-spacing: 0.02em;
+            /* 核心修改：手写字体 */
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 1.6rem; /* 手写体通常偏小，所以字号调大一点 */
+            line-height: 1.4;
+            text-align: left; /* 手写感不适合两端对齐，左对齐更自然 */
+            letter-spacing: 0.01em; /* 缩小字间距，更有连笔感 */
+            word-spacing: 0.1em;
         }
 
-        /* 响应式调整 */
+        /* 响应式 */
         @media (max-width: 600px) {
             .content-section { width: 85%; }
-            h1 { font-size: 3rem; }
+            .main-text { font-size: 1.4rem; }
         }
     </style>
 </head>
