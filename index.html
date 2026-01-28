@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>opheliadorothy</title>
     <style>
-        /* 引入原有的衬线体和手写体 */
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Nanum+Pen+Script&display=swap');
+        /* 引入原有的衬线体和更高级的手写花体 La Belle Aurore */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=La+Belle+Aurore&display=swap');
 
         body {
             background-color: #ffffff;
@@ -45,30 +45,31 @@
 
         /* 第二屏：正文及社交链接区 */
         .content-section {
-            max-width: 600px;
+            max-width: 650px; /* 稍微加宽一点，让花体伸展更自然 */
             margin: 0 auto;
-            padding: 15vh 30px 10vh 30px;
+            padding: 15vh 40px 10vh 40px;
             color: #1a1a1a;
         }
 
         .section-label {
             color: #b03020;
             font-family: 'Cormorant Garamond', serif;
-            font-size: 0.9rem;
-            letter-spacing: 0.3em;
+            font-size: 0.8rem;
+            letter-spacing: 0.4em;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             display: block;
+            opacity: 0.8;
         }
 
         .main-text {
-            font-family: 'Nanum Pen Script', cursive;
-            font-size: 1.6rem;
-            line-height: 1.5;
+            /* 核心修改：使用更具艺术感的纤细花体 */
+            font-family: 'La Belle Aurore', cursive;
+            font-size: 1.5rem; 
+            line-height: 1.3; /* 缩减行间距，让字里行间更紧凑 */
             text-align: left;
-            letter-spacing: 0.01em;
-            word-spacing: 0.1em;
-            margin-bottom: 80px; /* 为下面的链接留出空间 */
+            letter-spacing: -0.02em; /* 进一步收紧字间距 */
+            word-spacing: -0.05em; /* 单词之间也更靠近 */
         }
 
         /* 社交媒体链接样式 */
@@ -76,15 +77,16 @@
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
-            border-top: 0.5px solid rgba(176, 48, 32, 0.2); /* 极其淡的朱红分割线 */
+            border-top: 0.5px solid rgba(176, 48, 32, 0.15);
             padding-top: 30px;
+            margin-top: 60px;
         }
 
-        .social-links a {
+        .social-links a, .social-links span {
             font-family: 'Cormorant Garamond', serif;
             color: #b03020;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 0.15em;
             text-transform: lowercase;
             transition: opacity 0.3s ease;
@@ -94,20 +96,10 @@
             opacity: 0.5;
         }
 
-        .social-links span {
-            font-family: 'Cormorant Garamond', serif;
-            color: #b03020;
-            font-size: 0.9rem;
-            letter-spacing: 0.15em;
-            text-transform: lowercase;
-            opacity: 0.8;
-        }
-
         /* 响应式调整 */
         @media (max-width: 600px) {
-            .content-section { width: 85%; }
-            .main-text { font-size: 1.4rem; }
-            .social-links { gap: 15px; }
+            .content-section { width: 88%; }
+            .main-text { font-size: 1.3rem; }
         }
     </style>
 </head>
